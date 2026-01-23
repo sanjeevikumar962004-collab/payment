@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 | Page Not Found</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Specific Styles for 404 Page */
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: #f0f2f5;
+        }
+
+        .error-container {
+            text-align: center;
+            padding: 40px;
+            max-width: 500px;
+            width: 90%;
+        }
+
+        /* The Glitchy 404 Text */
+        .error-code {
+            font-size: 120px;
+            font-weight: 800;
+            line-height: 1;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            margin-bottom: 10px;
+            letter-spacing: -5px;
+        }
+
+        /* Floating Card Illustration */
+        .broken-card-visual {
+            position: relative;
+            height: 180px;
+            margin: 20px auto 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .card-piece {
+            width: 140px;
+            height: 90px;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border-radius: 15px;
+            position: absolute;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Simulating a broken card */
+        .card-piece.left {
+            transform: rotate(-15deg) translateX(-30px);
+            z-index: 1;
+        }
+
+        .card-piece.right {
+            transform: rotate(10deg) translateX(30px) translateY(10px);
+            background: var(--card-gradient, linear-gradient(135deg, #667eea 0%, #764ba2 100%));
+            z-index: 2;
+        }
+
+        .card-icon {
+            font-size: 40px;
+            color: rgba(255,255,255,0.2);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Message Styling */
+        .error-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+
+        .error-desc {
+            color: #64748b;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        /* Buttons */
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .primary-btn {
+            background: #1e293b;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+            box-shadow: 0 5px 15px rgba(30, 41, 59, 0.3);
+        }
+
+        .secondary-btn {
+            background: white;
+            color: #1e293b;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+
+        .primary-btn:hover, .secondary-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        /* Background decoration circles */
+        .bg-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.4;
+            z-index: -1;
+        }
+        .blob-1 { top: -10%; left: -10%; width: 300px; height: 300px; background: #667eea; }
+        .blob-2 { bottom: -10%; right: -10%; width: 300px; height: 300px; background: #764ba2; }
+
+    </style>
+</head>
+<body>
+
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+
+    <div class="error-container">
+        
+        <div class="broken-card-visual">
+            <div class="card-piece left">
+                <i class="ri-wifi-off-line card-icon"></i>
+            </div>
+            <div class="card-piece right">
+                <i class="ri-error-warning-line card-icon" style="color: rgba(255,255,255,0.8);"></i>
+            </div>
+        </div>
+
+        <h1 class="error-code">404</h1>
+        
+        <h2 class="error-title">Transaction Failed... or Page Lost?</h2>
+        <p class="error-desc">We couldn't find the page you're looking for. It might have been moved, deleted, or never existed.</p>
+
+        <div class="btn-group">
+            <a href="index.html" class="primary-btn">
+                <i class="ri-arrow-left-line"></i> Go Home
+            </a>
+            <a href="#" class="secondary-btn">
+                <i class="ri-customer-service-2-line"></i> Support
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>
