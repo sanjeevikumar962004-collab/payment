@@ -42,29 +42,28 @@ body {
     z-index: 100;
 }
 
-.user-profile {
+/* --- Logo Styling --- */
+.logo {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
 }
 
-.user-profile img {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    border: 2px solid var(--white);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.logo img {
+    width: 105px;
+    height: 35px;
+    border-radius: 10px; /* Modern rounded square look */
 }
 
-.user-info span {
-    font-size: 12px;
-    color: var(--text-light);
+.logo h4 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--text-dark);
 }
 
-.user-info h4 {
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1.2;
+.logo h4 span {
+    color: var(--accent-purple); /* Makes the "Pay" part purple */
 }
 
 .header-icons {
